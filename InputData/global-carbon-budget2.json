@@ -1,0 +1,182 @@
+[
+ {
+   "Year": 1979,
+   "Fossil-Fuel-And-Industry": 5.318,
+   "Land-Use-Change-Emissions": 1.039,
+   "Atmospheric-Growth": 4.558,
+   "Ocean-Sink": 1.356,
+   "Land-Sink": 1.444,
+   "Budget-Imbalance": -1.002
+ },
+ {
+   "Year": 1980,
+   "Fossil-Fuel-And-Industry": 5.292,
+   "Land-Use-Change-Emissions": 1.085,
+   "Atmospheric-Growth": 3.621,
+   "Ocean-Sink": 1.629,
+   "Land-Sink": 0.501,
+   "Budget-Imbalance": 0.626
+ },
+ {
+   "Year": 1981,
+   "Fossil-Fuel-And-Industry": 5.149,
+   "Land-Use-Change-Emissions": 1.102,
+   "Atmospheric-Growth": 2.449,
+   "Ocean-Sink": 1.617,
+   "Land-Sink": 2.25,
+   "Budget-Imbalance": -0.066
+ },
+ {
+   "Year": 1982,
+   "Fossil-Fuel-And-Industry": 5.11,
+   "Land-Use-Change-Emissions": 1.117,
+   "Atmospheric-Growth": 2.13,
+   "Ocean-Sink": 1.703,
+   "Land-Sink": 1.494,
+   "Budget-Imbalance": 0.902
+ },
+ {
+   "Year": 1983,
+   "Fossil-Fuel-And-Industry": 5.159,
+   "Land-Use-Change-Emissions": 1.16,
+   "Atmospheric-Growth": 3.941,
+   "Ocean-Sink": 1.826,
+   "Land-Sink": 0.227,
+   "Budget-Imbalance": 0.325
+ },
+ {
+   "Year": 1984,
+   "Fossil-Fuel-And-Industry": 5.309,
+   "Land-Use-Change-Emissions": 1.198,
+   "Atmospheric-Growth": 2.641,
+   "Ocean-Sink": 1.695,
+   "Land-Sink": 2.713,
+   "Budget-Imbalance": -0.542
+ },
+ {
+   "Year": 1985,
+   "Fossil-Fuel-And-Industry": 5.498,
+   "Land-Use-Change-Emissions": 1.218,
+   "Atmospheric-Growth": 3.451,
+   "Ocean-Sink": 1.649,
+   "Land-Sink": 2.651,
+   "Budget-Imbalance": -1.034
+ },
+ {
+   "Year": 1986,
+   "Fossil-Fuel-And-Industry": 5.576,
+   "Land-Use-Change-Emissions": 1.254,
+   "Atmospheric-Growth": 2.173,
+   "Ocean-Sink": 1.729,
+   "Land-Sink": 2.206,
+   "Budget-Imbalance": 0.722
+ },
+ {
+   "Year": 1987,
+   "Fossil-Fuel-And-Industry": 5.757,
+   "Land-Use-Change-Emissions": 1.291,
+   "Atmospheric-Growth": 5.751,
+   "Ocean-Sink": 1.824,
+   "Land-Sink": 0.428,
+   "Budget-Imbalance": -0.954
+ },
+ {
+   "Year": 1988,
+   "Fossil-Fuel-And-Industry": 5.977,
+   "Land-Use-Change-Emissions": 1.308,
+   "Atmospheric-Growth": 4.792,
+   "Ocean-Sink": 1.708,
+   "Land-Sink": 1.93,
+   "Budget-Imbalance": -1.145
+ },
+ {
+   "Year": 1989,
+   "Fossil-Fuel-And-Industry": 6.067,
+   "Land-Use-Change-Emissions": 1.335,
+   "Atmospheric-Growth": 2.939,
+   "Ocean-Sink": 1.702,
+   "Land-Sink": 3.363,
+   "Budget-Imbalance": -0.602
+ },
+ {
+   "Year": 1990,
+   "Fossil-Fuel-And-Industry": 6.2,
+   "Land-Use-Change-Emissions": 1.308,
+   "Atmospheric-Growth": 2.492,
+   "Ocean-Sink": 1.816,
+   "Land-Sink": 2.269,
+   "Budget-Imbalance": 0.931
+ },
+ {
+   "Year": 1991,
+   "Fossil-Fuel-And-Industry": 6.329,
+   "Land-Use-Change-Emissions": 1.307,
+   "Atmospheric-Growth": 1.576,
+   "Ocean-Sink": 1.909,
+   "Land-Sink": 2.194,
+   "Budget-Imbalance": 1.957
+ },
+ {
+   "Year": 1992,
+   "Fossil-Fuel-And-Industry": 6.132,
+   "Land-Use-Change-Emissions": 1.315,
+   "Atmospheric-Growth": 1.491,
+   "Ocean-Sink": 2.1,
+   "Land-Sink": 2.099,
+   "Budget-Imbalance": 1.757
+ },
+ {
+   "Year": 1993,
+   "Fossil-Fuel-And-Industry": 6.2,
+   "Land-Use-Change-Emissions": 1.313,
+   "Atmospheric-Growth": 2.62,
+   "Ocean-Sink": 2.028,
+   "Land-Sink": 2.832,
+   "Budget-Imbalance": 0.033
+ },
+ {
+   "Year": 1994,
+   "Fossil-Fuel-And-Industry": 6.244,
+   "Land-Use-Change-Emissions": 1.307,
+   "Atmospheric-Growth": 3.578,
+   "Ocean-Sink": 1.903,
+   "Land-Sink": 1.414,
+   "Budget-Imbalance": 0.656
+ },
+ {
+   "Year": 1995,
+   "Fossil-Fuel-And-Industry": 6.379,
+   "Land-Use-Change-Emissions": 1.292,
+   "Atmospheric-Growth": 4.153,
+   "Ocean-Sink": 1.908,
+   "Land-Sink": 1.693,
+   "Budget-Imbalance": -0.083
+ },
+ {
+   "Year": 1996,
+   "Fossil-Fuel-And-Industry": 6.577,
+   "Land-Use-Change-Emissions": 1.266,
+   "Atmospheric-Growth": 2.258,
+   "Ocean-Sink": 1.86,
+   "Land-Sink": 3.056,
+   "Budget-Imbalance": 0.67
+ },
+ {
+   "Year": 1997,
+   "Fossil-Fuel-And-Industry": 6.615,
+   "Land-Use-Change-Emissions": 1.738,
+   "Atmospheric-Growth": 4.196,
+   "Ocean-Sink": 1.992,
+   "Land-Sink": 3.189,
+   "Budget-Imbalance": -1.023
+ },
+ {
+   "Year": 1998,
+   "Fossil-Fuel-And-Industry": 6.591,
+   "Land-Use-Change-Emissions": 1.187,
+   "Atmospheric-Growth": 6.007,
+   "Ocean-Sink": 2.093,
+   "Land-Sink": 1.433,
+   "Budget-Imbalance": -1.754
+ }
+]
