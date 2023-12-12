@@ -1,5 +1,4 @@
-# Block-Aviate
-A vector DB using Weaviate with a blockchain ledger.
+# Block-Aviate: A vector DB using Weaviate with a blockchain ledger.
 ## Prerequisites
 - Python 3.0 minimum
 - Docker
