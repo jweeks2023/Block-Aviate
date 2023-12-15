@@ -7,6 +7,7 @@ import datetime      # To keep track of time, as each block has its own timestam
 import json          # For encoding the blocks before hashing them
 import hashlib       # For finding hashes for the blocks
 import weaviate
+import timeit
 
 file_name = "curChain.json"
 
@@ -130,7 +131,7 @@ class_obj = {
     }
 }
 
-if not client.schema.contains(client.schema.get(class_obj["class"])): # Checks if current class_obj class already exists within DB. If yes, skip insertion, otherwise insert the object
+if not client.schema.exists(class_name=class_obj["class"]): # Checks if current class_obj class already exists within DB. If yes, skip insertion, otherwise insert the object
     client.schema.create_class(class_obj) # Creates class based on this
     
     json_file = open('./InputData/global-carbon-budget.json')
@@ -141,7 +142,6 @@ if not client.schema.contains(client.schema.get(class_obj["class"])): # Checks i
     # Imports data from .json file to VDB; each group of insertions given a block in BC
         for (i, d) in enumerate(data):  # Batch import data
             print(f"importing entry: {i+1}")
-            print(f"entry: {d}")
             properties = {
                 "year": d["Year"],
                 "fossilFuelandIndustry": d["Fossil-Fuel-And-Industry"],
@@ -161,28 +161,33 @@ if not client.schema.contains(client.schema.get(class_obj["class"])): # Checks i
     #end with
 
     json_file.close()
+'''
+def Query():
+    print("Query: Print all entries in GlobalCarbonBudget in ascending order by year.")
+    response = (
+        client.query
+        .get("GlobalCarbonBudget",
+             ["year",
+              "fossilFuelandIndustry",
+              "landUseChangeEmissions",
+              "atmosphericGrowth",
+              "oceanSink",
+              "landSink",
+              "budgetImbalance"])
+        .with_sort({
+            "path": ["year"],
+            "order": "asc",
+        })
+        .do()
+    )
+    addBlock(1)
+    print(json.dumps(response, indent=4))
+    """
+    with open("GCBData.json", "w") as write:
+        json.dump(response, write, indent=4)"""
 
-print("Query: Print all entries in GlobalCarbonBudget in ascending order by year.")
-response = (
-    client.query
-    .get("GlobalCarbonBudget",
-         ["year",
-          "fossilFuelandIndustry",
-          "landUseChangeEmissions",
-          "atmosphericGrowth",
-          "oceanSink",
-          "landSink",
-          "budgetImbalance"])
-    .with_sort({
-        "path": ["year"],
-        "order": "asc",
-    })
-    .do()
-)
-addBlock(1)
-print(json.dumps(response, indent=4))
-with open("GCBData.json", "w") as write:
-    json.dump(response, write, indent=4)
+print(timeit.timeit(Query(),number=1000))
+
 
 print("Query: Years where the land sink and ocean sink are both greater than 1.5 in ascending order by year.")
 response = (
@@ -221,5 +226,5 @@ print(json.dumps(response, indent=4))
 
 with open("queryOut.json", "w") as write:
     json.dump(response, write, indent=4)
-
+'''
 
