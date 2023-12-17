@@ -161,8 +161,8 @@ if not client.schema.exists(class_name=class_obj["class"]): # Checks if current 
     #end with
 
     json_file.close()
-'''
-def Query():
+
+def Query():    # A method used to test querying 
     print("Query: Print all entries in GlobalCarbonBudget in ascending order by year.")
     response = (
         client.query
@@ -185,9 +185,61 @@ def Query():
     """
     with open("GCBData.json", "w") as write:
         json.dump(response, write, indent=4)"""
+   
+def Insert(n):    # A method used to test object insertion
+    json_file = open('./InputData/global-carbon-budget20.json')
+    data = json.load(json_file);
+    
+    client.batch.configure(batch_size=30, num_workers=2)  # Configure batch
+    with client.batch as batch:  # Initialize a batch process 
+    # Imports data from .json file to VDB; each group of insertions given a block in BC
+        for (i, d) in enumerate(data):  # Batch import data
+            print(f"importing entry: {i+1}")
+            properties = {
+                "year": d["Year"],
+                "fossilFuelandIndustry": d["Fossil-Fuel-And-Industry"],
+                "landUseChangeEmissions": d["Land-Use-Change-Emissions"],
+                "atmosphericGrowth": d["Atmospheric-Growth"],
+                "oceanSink": d["Ocean-Sink"],
+                "landSink": d["Land-Sink"],
+                "budgetImbalance": d["Budget-Imbalance"],
+            }
+            batch.add_data_object(
+                data_object=properties,
+                class_name="GlobalCarbonBudget",
+            )
+            if i % n == 0:
+                addBlock(0)
+        # end for
+    #end with
 
-print(timeit.timeit(Query(),number=1000))
+    json_file.close()
 
+''' # Leftover queries
+print("Query: Print all entries in GlobalCarbonBudget in ascending order by year.")
+response = (
+    client.query
+    .get("GlobalCarbonBudget",
+         ["year",
+          "fossilFuelandIndustry",
+          "landUseChangeEmissions",
+          "atmosphericGrowth",
+          "oceanSink",
+          "landSink",
+          "budgetImbalance"])
+    .with_sort({
+        "path": ["year"],
+        "order": "asc",
+    })
+    .do()
+)
+addBlock(1)
+print(json.dumps(response, indent=4))
+
+with open("GCBData.json", "w") as write:
+    json.dump(response, write, indent=4)
+    
+================================================================================================================
 
 print("Query: Years where the land sink and ocean sink are both greater than 1.5 in ascending order by year.")
 response = (
